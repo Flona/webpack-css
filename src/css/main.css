@@ -1,0 +1,25 @@
+/* 如若本身使less文件非css文件，不会有问题，不用特别处理 */
+
+/* for test importLoaders and postcss-import */
+/* 直接引用css文件的情况，通过importLoaders或postcss-import均正常 */
+:global(#root) {
+    transform: translate(100px,100px)
+}
+/* for test importLoaders and postcss-import */
+/* modules方式下，直接引用css文件，通过postcss-import可正常被export出去 */
+.test-moudles-main {
+    transform: translate(10px,10px)
+}
+/* for test composes */
+.box {
+    border-color: pink;
+    background-color: pink;
+    transform: translate(5px,5px)
+}
+/* for test optimize-assets-webpack-plugin */
+/* for test cssnano */
+.box {
+    border-color: pink;
+    background-color: pink;
+    transform: translate(5px,5px)
+}
